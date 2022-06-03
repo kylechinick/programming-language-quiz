@@ -11,15 +11,15 @@ function quizAnalyzer(
   if (colorParam === 'red' || colorParam === 'yellow') {
     const quizResult = 'You should learn Javascript';
     console.log('You should learn Javascript');
-    $('#language-quiz-result-container').text(quizResult);
+    $('#language-quiz-result-announcement').text(quizResult);
   } else if (colorParam === 'blue' || colorParam === 'green') {
     const quizResult = 'You should learn C#';
     console.log('You should learn C#');
-    $('#language-quiz-result-container').text(quizResult);
+    $('#language-quiz-result-announcement').text(quizResult);
   } else if (colorParam === 'orange' || colorParam === 'purple') {
     const quizResult = 'You should learn Python';
     console.log('You should learn Python');
-    $('#language-quiz-result-container').text(quizResult);
+    $('#language-quiz-result-announcement').text(quizResult);
   } else {
     console.log(
       'Something went wrong, please reload this webpage and submit your responses again.'
@@ -64,5 +64,9 @@ $(document).ready(function () {
     showLanguageQuizResultContainer();
 
     document.getElementById('languages-quiz-form').reset();
+
+    $('#languages-quiz-form').click(function () {
+      $('#language-quiz-result-container').hide();
+    });
   });
 });
