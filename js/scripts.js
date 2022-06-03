@@ -67,6 +67,7 @@ $(document).ready(function () {
 
     $('#languages-quiz-form').click(function () {
       $('#language-quiz-result-container').hide();
+      $('#language-quiz-result-announcement').empty();
     });
   });
 });
