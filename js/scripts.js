@@ -7,11 +7,15 @@ function quizAnalyzer(
 ) {
   const allArgumentsTestVar = `You selected: ${colorParam.toString()}, ${foodParam.toString()}, ${rollerbladesParam.toString()}, ${llamasParam.toString()}, and ${alienNameParam.toString()}.`;
   console.log(allArgumentsTestVar);
-  if (colorParam === 'yellow') {
-    const quizResult = 'YOU SHOULD LEARN JAVASCRIPT';
+
+  if (colorParam === 'red' || colorParam === 'yellow') {
+    const quizResult = 'You should learn Javascript';
+    $('#language-quiz-result-container').text(quizResult);
+  } else if (colorParam === 'blue' || colorParam === 'green') {
+    const quizResult = 'You should learn C#';
     $('#language-quiz-result-container').text(quizResult);
   } else {
-    const quizResult = 'YOU SHOULD HAVE CHOSEN THE COLOR YELLOW';
+    const quizResult = 'You should learn Python';
     $('#language-quiz-result-container').text(quizResult);
   }
 }
