@@ -10,6 +10,88 @@
     <title>Programming Language Quiz</title>
   </head>
   <body>
-    <h1>Test</h1>
+    <h1>Programming Lanuguage Quiz</h1>
+    <p>
+      Fill out the form below to receive a personalized recommendation for which
+      programming language is best for you.
+    </p>
+
+    <form>
+      <div class="questionContainer">
+        <p>What is your favorite color?</p>
+        <select name="colorQuestion" id="colorQuestion">
+          <option>Red</option>
+          <option>Yellow</option>
+          <option>Blue</option>
+          <option>Green</option>
+          <option>Orange</option>
+          <option>Purple</option>
+        </select>
+      </div>
+
+      <div class="questionContainer">
+        <p>What is your favorite food?</p>
+        <label>
+          <input type="radio" name="foodQuestion" />
+          Pizza
+        </label>
+        <label>
+          <input type="radio" name="foodQuestion" />
+          Burger
+        </label>
+        <label>
+          <input type="radio" name="foodQuestion" />
+          Salad
+        </label>
+        <label>
+          <input type="radio" name="foodQuestion" />
+          Tofu
+        </label>
+      </div>
+
+      <div class="questionContainer">
+        <p>Do you own rollerblades?</p>
+        <label>
+          <input
+            type="radio"
+            name="rollerbladesQuestion"
+            id="rollerbladesQuestion"
+          />
+          Yes
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="rollerbladesQuestion"
+            id="rollerbladesQuestion"
+          />
+          No
+        </label>
+      </div>
+
+      <div class="questionContainer">
+        <label for="foodQuestion"
+          >How many total llamas have you seen in your lifetime?</label
+        >
+        <input type="number" name="llamasQuestion" id="llamasQuestion" />
+      </div>
+
+      <div class="questionContainer">
+        <p>
+          Select your top preference for what your new name would be if you had
+          to choose from the following:
+        </p>
+        <select name="alienNameQuestion" id="alienNameQuestion">
+          <option>Willzyx</option>
+          <option>Worf</option>
+          <option>Ahsoka</option>
+          <option>Name4</option>
+          <option>Name5</option>
+          <option>Name6</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit Quiz Answers</button>
+    </form>
   </body>
 </html>
