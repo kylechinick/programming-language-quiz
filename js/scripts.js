@@ -16,10 +16,14 @@ function quizAnalyzer(
     const quizResult = 'You should learn C#';
     console.log('You should learn C#');
     $('#language-quiz-result-container').text(quizResult);
-  } else {
+  } else if (colorParam === 'orange' || colorParam === 'purple') {
     const quizResult = 'You should learn Python';
     console.log('You should learn Python');
     $('#language-quiz-result-container').text(quizResult);
+  } else {
+    console.log(
+      'Something went wrong, please reload this webpage and submit your responses again.'
+    );
   }
 }
 
