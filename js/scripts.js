@@ -1,3 +1,19 @@
+function quizAnalyzer(
+  colorParam,
+  foodParam,
+  rollerbladesParam,
+  llamasParam,
+  alienNameParam
+) {
+  if (colorParam === 'yellow') {
+    const quizResult = 'YOU SHOULD LEARN JAVASCRIPT';
+    $('#language-quiz-result-container').text(quizResult);
+  } else {
+    const quizResult = 'YOU SHOULD HAVE CHOSEN THE COLOR YELLOW';
+    $('#language-quiz-result-container').text(quizResult);
+  }
+}
+
 $(document).ready(function () {
   $('#languagesQuizForm').submit(function (event) {
     event.preventDefault();
@@ -19,5 +35,7 @@ $(document).ready(function () {
 
     const alienNameResponse = $('#alienNameQuestion').val();
     console.log(alienNameResponse);
+
+    quizAnalyzer(colorResponse);
   });
 });
