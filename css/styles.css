@@ -14,3 +14,10 @@ body {
   margin: 1rem;
   padding: 1rem;
 }
+
+#language-quiz-result-container {
+  display: none;
+  border: 1px solid orange;
+  min-width: 100px;
+  min-height: 100px;
+}
