@@ -5,6 +5,8 @@ function quizAnalyzer(
   llamasParam,
   alienNameParam
 ) {
+  const allArgumentsTestVar = `You selected: ${colorParam.toString()}, ${foodParam.toString()}, ${rollerbladesParam.toString()}, ${llamasParam.toString()}, and ${alienNameParam.toString()}.`;
+  console.log(allArgumentsTestVar);
   if (colorParam === 'yellow') {
     const quizResult = 'YOU SHOULD LEARN JAVASCRIPT';
     $('#language-quiz-result-container').text(quizResult);
@@ -36,6 +38,12 @@ $(document).ready(function () {
     const alienNameResponse = $('#alienNameQuestion').val();
     console.log(alienNameResponse);
 
-    quizAnalyzer(colorResponse);
+    quizAnalyzer(
+      colorResponse,
+      foodResponse,
+      rollerbladesResponse,
+      llamasResponse,
+      alienNameResponse
+    );
   });
 });
