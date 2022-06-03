@@ -27,6 +27,10 @@ function quizAnalyzer(
   }
 }
 
+function showLanguageQuizResultContainer() {
+  $('#language-quiz-result-container').show();
+}
+
 $(document).ready(function () {
   $('#languages-quiz-form').submit(function (event) {
     event.preventDefault();
@@ -56,6 +60,9 @@ $(document).ready(function () {
       llamasResponse,
       alienNameResponse
     );
+
+    showLanguageQuizResultContainer();
+
     document.getElementById('languages-quiz-form').reset();
   });
 });
