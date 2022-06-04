@@ -1,23 +1,29 @@
 * {
-  /* border: 1px solid red; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   line-height: 1.4;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   padding: 1rem;
 }
 
-h1 {
-  font-family: 'Exo 2', sans-serif;
+main {
+  margin: 0 auto;
+  max-width: 660px;
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 p,
 label {
-  margin-top: 1rem;
+  max-width: 80ch;
+  font-size: 1.2rem;
 }
 
 form,
@@ -30,6 +36,9 @@ form,
 
 .questionContainer {
   margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #ed7014;
+  border-radius: 6px;
 }
 
 button {
@@ -38,6 +47,8 @@ button {
   padding: 0.5rem;
   font-size: 1.2rem;
   background-color: #ed7014;
+  border: none;
+  border-radius: 6px;
 }
 
 button:hover {
@@ -45,7 +56,7 @@ button:hover {
   background-color: #b2510c;
 }
 
-button:focus {
+button:active {
   background-color: #5d2b06;
 }
 
