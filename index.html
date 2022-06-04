@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;900&family=JetBrains+Mono:wght@300;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <script
@@ -20,84 +20,86 @@
     <title>Programming Language Quiz</title>
   </head>
   <body>
-    <h1>Programming Language Quiz</h1>
-    <p>
-      Fill out the form below to receive a personalized recommendation for which
-      programming language you should learn first.
-    </p>
+    <main>
+      <h1>Programming Language Quiz</h1>
+      <p>
+        Fill out the form below to receive a personalized recommendation for
+        which programming language you should learn first.
+      </p>
 
-    <form id="languages-quiz-form">
-      <div class="questionContainer">
-        <p>What is your favorite color?</p>
-        <select name="colorQuestion" id="colorQuestion">
-          <option value="red">Red</option>
-          <option value="yellow">Yellow</option>
-          <option value="blue">Blue</option>
-          <option value="green">Green</option>
-          <option value="orange">Orange</option>
-          <option value="purple">Purple</option>
-        </select>
+      <form id="languages-quiz-form">
+        <div class="questionContainer">
+          <p>What is your favorite color?</p>
+          <select name="colorQuestion" id="colorQuestion">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="orange">Orange</option>
+            <option value="purple">Purple</option>
+          </select>
+        </div>
+
+        <div class="questionContainer">
+          <p>What is your favorite food?</p>
+          <label>
+            <input type="radio" name="foodQuestion" value="pizza" />
+            Pizza
+          </label>
+          <label>
+            <input type="radio" name="foodQuestion" value="burger" />
+            Burger
+          </label>
+          <label>
+            <input type="radio" name="foodQuestion" value="salad" />
+            Salad
+          </label>
+          <label>
+            <input type="radio" name="foodQuestion" value="tofu" />
+            Tofu
+          </label>
+        </div>
+
+        <div class="questionContainer">
+          <p>Do you own rollerblades?</p>
+          <label>
+            <input type="radio" name="rollerbladesQuestion" value="yes" />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="rollerbladesQuestion" value="no" />
+            No
+          </label>
+        </div>
+
+        <div class="questionContainer">
+          <label for="llamasQuestion">
+            How many total llamas have you seen in your lifetime?
+          </label>
+          <input type="number" name="llamasQuestion" id="llamasQuestion" />
+        </div>
+
+        <div class="questionContainer">
+          <p>
+            Select your top preference for what your new name would be if you
+            had to choose from the following alien names:
+          </p>
+          <select name="alienNameQuestion" id="alienNameQuestion">
+            <option value="willzyx">Willzyx</option>
+            <option value="worf">Worf</option>
+            <option value="ahsoka">Ahsoka</option>
+            <option value="drax">Drax</option>
+            <option value="neytiri">Neytiri</option>
+            <option value="chewbacca">Chewbacca</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit Quiz Answers</button>
+      </form>
+      <div id="language-quiz-result-container">
+        <h2>Your Result</h2>
+        <p id="language-quiz-result-announcement"></p>
       </div>
-
-      <div class="questionContainer">
-        <p>What is your favorite food?</p>
-        <label>
-          <input type="radio" name="foodQuestion" value="pizza" />
-          Pizza
-        </label>
-        <label>
-          <input type="radio" name="foodQuestion" value="burger" />
-          Burger
-        </label>
-        <label>
-          <input type="radio" name="foodQuestion" value="salad" />
-          Salad
-        </label>
-        <label>
-          <input type="radio" name="foodQuestion" value="tofu" />
-          Tofu
-        </label>
-      </div>
-
-      <div class="questionContainer">
-        <p>Do you own rollerblades?</p>
-        <label>
-          <input type="radio" name="rollerbladesQuestion" value="yes" />
-          Yes
-        </label>
-        <label>
-          <input type="radio" name="rollerbladesQuestion" value="no" />
-          No
-        </label>
-      </div>
-
-      <div class="questionContainer">
-        <label for="llamasQuestion"
-          >How many total llamas have you seen in your lifetime?</label
-        >
-        <input type="number" name="llamasQuestion" id="llamasQuestion" />
-      </div>
-
-      <div class="questionContainer">
-        <p>
-          Select your top preference for what your new name would be if you had
-          to choose from the following alien names:
-        </p>
-        <select name="alienNameQuestion" id="alienNameQuestion">
-          <option value="willzyx">Willzyx</option>
-          <option value="worf">Worf</option>
-          <option value="ahsoka">Ahsoka</option>
-          <option value="drax">Drax</option>
-          <option value="neytiri">Neytiri</option>
-          <option value="chewbacca">Chewbacca</option>
-        </select>
-      </div>
-
-      <button type="submit">Submit Quiz Answers</button>
-    </form>
-    <div id="language-quiz-result-container">
-      <h2>Your Result</h2>
-      <p id="language-quiz-result-announcement"></p>
-    </div>
+    </main>
   </body>
 </html>
