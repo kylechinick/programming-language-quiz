@@ -1,10 +1,4 @@
-function quizAnalyzer(
-  colorParam,
-  foodParam,
-  rollerbladesParam,
-  llamasParam,
-  alienNameParam
-) {
+function quizAnalyzer(colorParam) {
   if (colorParam === 'red' || colorParam === 'yellow') {
     const quizResult = 'You should learn Javascript';
     $('#language-quiz-result-announcement').text(quizResult);
