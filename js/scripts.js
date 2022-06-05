@@ -1,11 +1,11 @@
-function quizAnalyzer(colorParam) {
-  if (colorParam === 'red' || colorParam === 'yellow') {
+function quizAnalyzer(response1) {
+  if (response1 === 'red' || response1 === 'yellow') {
     const quizResult = 'You should learn Javascript';
     $('#language-quiz-result-announcement').text(quizResult);
-  } else if (colorParam === 'blue' || colorParam === 'green') {
+  } else if (response1 === 'blue' || response1 === 'green') {
     const quizResult = 'You should learn C#';
     $('#language-quiz-result-announcement').text(quizResult);
-  } else if (colorParam === 'orange' || colorParam === 'purple') {
+  } else if (response1 === 'orange' || response1 === 'purple') {
     const quizResult = 'You should learn Python';
     $('#language-quiz-result-announcement').text(quizResult);
   } else {
@@ -17,6 +17,16 @@ function quizAnalyzer(colorParam) {
 
 function showLanguageQuizResultContainer() {
   $('#language-quiz-result-container').show();
+}
+
+function warningMessage() {
+  $(
+    `<div id="incomplete-form-warning"><p class="light-color">Please complete the entire form to proceed</p><button class="light-color">Continue</button>`
+  ).appendTo('body');
+  $('#incomplete-form-warning').addClass('warning-message');
+  $('#incomplete-form-warning > button').click(function () {
+    $('#incomplete-form-warning').remove();
+  });
 }
 
 $(document).ready(function () {
@@ -35,21 +45,27 @@ $(document).ready(function () {
 
     const alienNameResponse = $('#alienNameQuestion').val();
 
-    quizAnalyzer(
-      colorResponse,
-      foodResponse,
-      rollerbladesResponse,
-      llamasResponse,
-      alienNameResponse
-    );
+    if (
+      !colorResponse ||
+      !foodResponse ||
+      !rollerbladesResponse ||
+      !llamasResponse ||
+      !alienNameResponse
+    ) {
+      // alert('Please complete the entire form to proceed');
+      warningMessage();
+      $('form').effect('shake');
+    } else {
+      quizAnalyzer(colorResponse);
 
-    showLanguageQuizResultContainer();
+      showLanguageQuizResultContainer();
 
-    document.getElementById('languages-quiz-form').reset();
+      document.getElementById('languages-quiz-form').reset();
 
-    $('#languages-quiz-form').click(function () {
-      $('#language-quiz-result-container').hide();
-      $('#language-quiz-result-announcement').empty();
-    });
+      $('#languages-quiz-form').click(function () {
+        $('#language-quiz-result-container').hide();
+        $('#language-quiz-result-announcement').empty();
+      });
+    }
   });
 });

@@ -9,6 +9,9 @@
 
 body {
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
@@ -63,7 +66,29 @@ button:active {
 
 #language-quiz-result-container {
   display: none;
-  border: 1px solid orange;
+  border: 2px solid rgb(1, 106, 1);
   min-width: 100px;
   min-height: 100px;
+}
+
+.warning {
+  border: 2px solid red;
+}
+
+.warning-message {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 80%;
+  height: 50%;
+  background-color: #333;
+  font-size: 2.5rem;
+  border-radius: 6px;
+}
+
+.light-color {
+  color: #e3e3e3;
 }
