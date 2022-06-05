@@ -52,7 +52,6 @@ $(document).ready(function () {
       !llamasResponse ||
       !alienNameResponse
     ) {
-      // alert('Please complete the entire form to proceed');
       warningMessage();
       $('form').effect('shake');
     } else {
